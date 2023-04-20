@@ -1,0 +1,24 @@
+Can create an Anaconda cloud account to create you own channel
+
+Conda-forge and Bioconda
+Conda-forge
+    Over 21,000 packages
+    multiple maintainers per package?
+    Certain files that contain the package metadata
+
+pyproject.toml
+    PEP 518
+    2016
+    Allows setuptools to install itself during the packaging proces
+
+Recipe
+    Meta.yaml file - metadata
+    build script - build.sh or build.bat
+        Or will look for build script inline
+
+When you submit a recipe to the conda-forge repo, scanned then create feedstock
+
+Grayskull - automatically generates recipes for conda packages, github repos,
+    Takes recipe to build conda package
+
+    
