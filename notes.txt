@@ -1,3 +1,5 @@
+https://hackmd.io/ElBrRQ6rT4K_dfzjY6pAFQ?view#Python-Packaging-Tutorial-The-Conda-Way
+
 Can create an Anaconda cloud account to create you own channel
 
 Conda-forge and Bioconda
@@ -61,5 +63,32 @@ Install Grayskull
 Create a release on GitHub with a version
 
 Move the cwd out of the package directory - the file we're about to create should not live in the git repo
+    In this case in ../Grayskull
 
-Grayskull will generator a meta.yaml file with the conda recipe
+Grayskull will generator a meta.yaml file with a bunch of packaging information
+
+install conda build (conda install conda-build)
+
+From the grayskull folder: `conda build -c leriomaggio name-of-package`
+Waaaaiiit for it
+
+## Submitting to Conda forge
+
+Fork the staged-recipes repo
+Add you recipe
+Submit a PR
+    Long template on the PR to fill in 
+    May need to do a special thing to ping the team via a bot
+    Long checklist to fill out
+
+Conda forge is entirely volunteer organization and they are BUSY
+    Can ping team after a week on GitHub or on the Matrix channel
+
+Creates a feedstock
+    A feedsstock is a conda recipe and necessary config files for some CI tools
+
+Conda forge is the biggest public channel
+    Bioconda
+    IMB
+    Intel
+    Nvidia
