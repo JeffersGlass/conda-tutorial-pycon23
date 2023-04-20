@@ -21,4 +21,35 @@ When you submit a recipe to the conda-forge repo, scanned then create feedstock
 Grayskull - automatically generates recipes for conda packages, github repos,
     Takes recipe to build conda package
 
-    
+Making a public github repository for that sake of making it available to the packaging tools
+
+`conda info --envs` lists all of the known conda environments
+
+Add __init__.py file to the python package, to make it a package
+    Whatever the names imported into __init__ will be the 'public api' of the package
+    They are available as names in top level namespace of the package
+
+Create pytest.ini to hold pytest in the top level of the package folder
+pytest is included in the conda distribution
+
+```Conda Clear Cash```
+`conda clean --all --yes` clears the system wide miniconda cache
+
+Create setup.py file
+setup() function will be called when we want to setup a package
+Add metadata - name, version (a complicated subject), etc
+include_package_data = True: can include addition non-Python resources in your package
+packages = find(packags) can exclude packages you don't want to include
+install_requires = dependencies
+    Useful script `conda env export -n environmentName --no-builds > environment.yaml
+
+In conda, the channels are in an ordered list
+Packages are resolved in channel order name down this list
+So in theory yes malicious packages could be installed in earlier channels in the list
+Do you absolutely definitely need every pacakge?
+
+Then go through and prune the dependencies to the ones you actually need, manually
+If you install from pip, there will be a section in the dependencies  for pip dependencies
+    Conda dependencies will be installed first, then from pip
+
+Write a descrpitin into README.md
