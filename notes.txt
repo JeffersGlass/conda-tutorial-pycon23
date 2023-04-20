@@ -53,3 +53,13 @@ If you install from pip, there will be a section in the dependencies  for pip de
     Conda dependencies will be installed first, then from pip
 
 Write a descrpitin into README.md
+
+Commit and Push
+
+Install Grayskull
+
+Create a release on GitHub with a version
+
+Move the cwd out of the package directory - the file we're about to create should not live in the git repo
+
+Grayskull will generator a meta.yaml file with the conda recipe
